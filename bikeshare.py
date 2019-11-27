@@ -30,6 +30,7 @@ def get_filters():
     months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
     print('\nWhich month would you like to explore')
     month = input('Enter months from january to june or "all" if you dont want to filter by month: ')
+    #use a while loop to handle wrong inputs
     while month.lower() not in months:
         print('Wrong input')
         month = input('Please enter available month: ')
@@ -39,6 +40,7 @@ def get_filters():
     days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     print('\nWhich day of the week would you like to explore')
     day = input('Enter any day of the week or "all" if you dont want to filter by day: ')
+    #use a while loop to handle wrong inputs
     while day.lower() not in days:
         print('Wrong input')
         day in input('Please enter correct day: ')
