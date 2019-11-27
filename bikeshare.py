@@ -24,7 +24,7 @@ def get_filters():
         print('Wrong input')
         city = input('Please enter available city:')
     print('Great! we are checking data for', city.lower())
-        
+
 
     # TO DO: get user input for month (all, january, february, ... , june)
     months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
@@ -43,9 +43,9 @@ def get_filters():
         print('Wrong input')
         day in input('Please enter correct day: ')
     print('Great! we are checking data for', day.lower())
-        
 
-       
+
+
     print('-'*40)
     return city.lower(), month.lower(), day.lower()
 
@@ -69,7 +69,7 @@ def load_data(city, month, day):
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     df['hour'] = df['Start Time'].dt.hour
-    
+
     #filter by month if applicable
     if month != 'all':
         #use the index of the months list to get the corresponding int
@@ -77,7 +77,7 @@ def load_data(city, month, day):
         month = months.index(month) + 1
         #filter by month to create the new dataframe
         df = df[df['month'] == month]
-        
+
     #filter by day of week if applicable
     if day != 'all':
         #filter by day of week to create the new dataframe
@@ -85,7 +85,7 @@ def load_data(city, month, day):
         #displaying answer if user want to view first five rows of data or not
     while True:
 
-        answer = input('\nWould you like to view raw data? Enter yes or no\n').lower() #added raw
+        answer = input('\nWould you like to view raw data? Enter yes or no\n').lower() 
 
         if answer == 'yes':
             print('First five raw data\n', df.head())
@@ -164,7 +164,7 @@ def trip_duration_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
+
 def user_stats(df):
     """Displays statistics on bikeshare users."""
 
@@ -192,7 +192,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-    
+
 
 def main():
     while True:
@@ -203,7 +203,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-           
+
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
