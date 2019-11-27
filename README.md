@@ -8,10 +8,10 @@ Explore **US** Bikeshare Data
 Python was used to explore data related to bikeshare system for three cities in US; Chicago, New York City and Washington
 
 ### Files used
-chicago.csv/
-new_york_city.csv/
-washington.csv/
+* chicago.csv
+* new_york_city.csv
+* washington.csv
 
 ### Credits
-* @JayT/
+* @JayT
 * https://guides.github.com/features/mastering-markdown/
